@@ -19,5 +19,19 @@ namespace EX_01
             OctSideLen = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" Octagon Perimeter: {0}" , OctSideLen * 8);
         }
+
+        // Area for Octagon
+        public override void GetArea()
+        {
+            try
+            {
+                double area = 2 * (1 + Math.Sqrt(2) * (OctSideLen * OctSideLen));
+                Console.WriteLine(" Octagon Area: {0}", area);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.Message);
+            }
+        }
     }
 }

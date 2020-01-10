@@ -20,5 +20,19 @@ namespace EX_01
             Console.WriteLine(" Triangle Perimeter: {0}", TriSideLen * 3);
 
         }
+
+        // Area for Triangle
+        public override void GetArea()
+        {
+            try
+            {
+                double area = ((Math.Sqrt(3)/(4)) * (TriSideLen * TriSideLen));
+                Console.WriteLine(" Triangle Area: {0}", area);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.Message);
+            }
+        }
     }
 }

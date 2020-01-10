@@ -20,5 +20,11 @@ namespace EX_01
             Radius = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" Circle Perimeter: {0}", 3.141595267898 * Radius * 2);
         }
+
+        // Area for circle
+        public override void GetArea()
+        {
+            Console.WriteLine(" Circle Area: {0}", 3.141595267898 * Radius * Radius);
+        }
     }
 }

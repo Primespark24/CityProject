@@ -18,5 +18,10 @@ namespace EX_01
         {
             Console.WriteLine("\n Error: Generic shapes don't contain valid area.");
         }
+
+        public virtual void GetArea()
+        {
+            Console.WriteLine("\n Error: Generic shapes don't contain valid area.");
+        }
     }
 }
