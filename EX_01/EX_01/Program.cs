@@ -17,8 +17,6 @@ namespace EX_01
             string[] shapeNames = new string[6] {"Square", "Triangle", "Circle", "Octagon", "EqPolygon", "Shape"}; // Array of shapes
             ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor)); // Array of colors
 
-            // asdfasdfasdf
-            
             Console.WriteLine(" Mason's Shape Calculator");
 
             // keep program running unless user says no to continue
