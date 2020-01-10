@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="Comparable.cs" />
     <Compile Include="EqPolygon.cs" />
     <Compile Include="Octagon.cs" />
     <Compile Include="Program.cs" />
