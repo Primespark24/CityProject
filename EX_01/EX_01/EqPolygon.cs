@@ -31,5 +31,20 @@ namespace EX_01
             SideLen = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" EqPolygon Perimeter: {0}", SideLen * NumSides);
         }
+
+        // Area for EqPolygon
+        public override void GetArea()
+        {
+            try
+            {
+                double apothem = (SideLen) / (2 * (Math.Tan(180 / NumSides)));
+                double area = .5 * apothem * NumSides;
+                Console.WriteLine(" EqPolygon Area: {0}", area);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.Message);
+            }
+        }
     }
 }

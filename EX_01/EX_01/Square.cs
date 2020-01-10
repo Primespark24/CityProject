@@ -19,5 +19,19 @@ namespace EX_01
             SqSideLen = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(" Square Perimeter: {0}", SqSideLen * 4);
         }
+
+        // Area for Square
+        public override void GetArea()
+        {
+            try
+            {
+                double area = SqSideLen * SqSideLen;
+                Console.WriteLine(" Square Area: {0}", area);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.Message);
+            }
+        }
     }
 }
