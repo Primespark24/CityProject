@@ -6,9 +6,8 @@ namespace EX_01
     {
         public interface IComparable
         {
-            void CompareArea();
-            void ComparePerimeter();
-            void CompareColor();
+            void CompareArea(Shape s1, Shape s2);
+            void ComparePerimeter(Shape s1, Shape s2);
         }
     }
 }

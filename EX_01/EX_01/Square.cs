@@ -60,5 +60,22 @@ namespace EX_01
                 return 0.0;
             }
         }
+
+        // Print properties for Square
+        public override void PrintShape()
+        {
+            Console.WriteLine("Square Perimeter: " + GetPerimeter());
+            Console.WriteLine("Square Area: " + GetArea());
+            if ((GetArea() == 0 && GetPerimeter() == 0))
+            {
+                Console.WriteLine("This shape hasn't been modified yet");
+                Console.WriteLine("Enter Square Side Length: ");
+                while (true)
+                {
+                    if (double.TryParse(Console.ReadLine(), out double sqLength)) { SqSideLen = sqLength; break; }
+                    else Console.WriteLine("Error: Try to input a int or a decimal");
+                }
+            }
+        }
     }
 }
