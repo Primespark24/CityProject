@@ -12,19 +12,45 @@ namespace EX_01
             set;
         }
 
+        // Set get of Circle Perimeter
+        public double Cperimeter 
+        { 
+            get; 
+            set;
+        }
+
+        //  Set Get of Circle Area
+        public double Carea
+        {
+            get;
+            set;
+        }
+
+        // Default Constructor
+        public Circle()
+        {
+            Radius = 0;
+        }
+
+        // Constructor
+        public Circle(double radius)
+        {
+            this.Radius = radius;
+        }
+
         // Perimeter questions for circle
-        public override void GetPerimeter()
+        public override double GetPerimeter()
         {
 
-            Console.WriteLine("Enter radius for circle");
-            Radius = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(" Circle Perimeter: {0}", 3.141595267898 * Radius * 2);
+           Cperimeter = (3.141595267898 * Radius * 2);
+           return Cperimeter;
         }
 
         // Area for circle
-        public override void GetArea()
+        public override double GetArea()
         {
-            Console.WriteLine(" Circle Area: {0}", 3.141595267898 * Radius * Radius);
+           Carea = (3.141595267898 * Radius * Radius);
+           return Carea;
         }
     }
 }

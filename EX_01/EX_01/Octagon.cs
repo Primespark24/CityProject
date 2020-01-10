@@ -12,25 +12,52 @@ namespace EX_01
             set;
         }
 
-        // Perimeter for Octagon
-        public override void GetPerimeter()
+        // Set Get Perimeter
+        public double OctPerimeter
         {
-            Console.WriteLine("\n Octagon: Enter side length");
-            OctSideLen = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(" Octagon Perimeter: {0}" , OctSideLen * 8);
+            get;
+            set;
+        }
+
+        // Set Get Area
+        public double OctArea
+        {
+            get; 
+            set;
+        }
+
+        //Default Constructor
+        public Octagon()
+        {
+            OctSideLen = 0;
+        }
+
+        // Constructor
+        public Octagon(double OctSideLen)
+        {
+            this.OctSideLen = OctSideLen;
+        }
+
+        // Perimeter for Octagon
+        public override double GetPerimeter()
+        {
+            
+            OctPerimeter = (OctSideLen * 8);
+            return OctPerimeter;
         }
 
         // Area for Octagon
-        public override void GetArea()
+        public override double GetArea()
         {
             try
             {
-                double area = 2 * (1 + Math.Sqrt(2) * (OctSideLen * OctSideLen));
-                Console.WriteLine(" Octagon Area: {0}", area);
+                OctArea = 2 * (1 + Math.Sqrt(2) * (OctSideLen * OctSideLen));
+                return OctArea;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
+                return 0.0;
             }
         }
     }

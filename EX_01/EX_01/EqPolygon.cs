@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace EX_01
 {
@@ -9,41 +6,67 @@ namespace EX_01
     {
 
         // Set Get methods
-        public double SideLen
+        public double EqSideLen
         {
             get;
             set;
         }
 
         // Set Get Methods
-        public int NumSides
+        public int EqNumSides
         {
             get;
             set;
         }
 
-        // GetPerimeter() for EqPolygon
-        public override void GetPerimeter()
+        // Set Get EqArea Method
+        public double EqArea
         {
-            Console.WriteLine("\n How many sides of this polygon?");
-            NumSides = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\n What is the length of each side?");
-            SideLen = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(" EqPolygon Perimeter: {0}", SideLen * NumSides);
+            get;
+            set;
+        }
+
+        // Set Get EqPerimeter method
+        public double EqPerimeter
+        {
+            get;
+            set;
+        }
+
+        // Default Constructor
+        public EqPolygon()
+        {
+            EqNumSides = 0;
+            EqSideLen = 0;
+        }
+
+        // Constructor
+        public EqPolygon(double eqSideLen, int eqNumSides)
+        {
+            this.EqSideLen = eqSideLen;
+            this.EqNumSides = eqNumSides;
+        }
+
+        // GetPerimeter() for EqPolygon
+        public override double GetPerimeter()
+        {
+            EqPerimeter = EqSideLen * EqNumSides;
+            return EqPerimeter;
         }
 
         // Area for EqPolygon
-        public override void GetArea()
+        public override double GetArea()
         {
             try
             {
-                double apothem = (SideLen) / (2 * (Math.Tan(180 / NumSides)));
-                double area = .5 * apothem * NumSides;
-                Console.WriteLine(" EqPolygon Area: {0}", area);
+                double apothem = (EqSideLen) / (2 * (Math.Tan(180 / EqNumSides)));
+                EqArea = .5 * apothem * EqNumSides;
+                return EqArea;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
+                return 0.0;
             }
         }
     }

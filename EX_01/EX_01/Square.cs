@@ -12,25 +12,51 @@ namespace EX_01
             set;
         }
 
-        // Get Perimeter for Square
-        public override void GetPerimeter()
+        // Set Get Area
+        public double SqArea
         {
-            Console.WriteLine("\n Square: Enter side length");
-            SqSideLen = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(" Square Perimeter: {0}", SqSideLen * 4);
+            get;
+            set;
+        }
+
+        // Set Get Perimeter
+        public double SqPerimeter
+        {
+            get;
+            set;
+        }
+
+        // Default Constructor
+        public Square()
+        {
+            SqSideLen = 0;
+        }
+
+        // Constructor
+        public Square(double SqSideLen)
+        {
+            this.SqSideLen = SqSideLen;
+        }
+
+        // Get Perimeter for Square
+        public override double GetPerimeter()
+        {
+            SqPerimeter = (SqSideLen * 4);
+            return SqPerimeter;
         }
 
         // Area for Square
-        public override void GetArea()
+        public override double GetArea()
         {
             try
             {
-                double area = SqSideLen * SqSideLen;
-                Console.WriteLine(" Square Area: {0}", area);
+                SqArea = SqSideLen * SqSideLen;
+                return SqArea;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.Message);
+                return 0.0;
             }
         }
     }
