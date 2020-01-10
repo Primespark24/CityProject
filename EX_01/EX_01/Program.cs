@@ -12,9 +12,10 @@ namespace EX_01
             string response; // Holds response from user
             int select; // Keeps number selected for shape
             Shape s = new Shape();
-            
+            Validation v = new Validation();
+
             // Arrays
-            string[] shapeNames = new string[6] {"Square", "Triangle", "Circle", "Octagon", "EqPolygon", "Shape"}; // Array of shapes
+            string[] shapeNames = new string[7] { "Square", "Triangle", "Circle", "Octagon", "EqPolygon", "Shape", "Compare"}; // Array of shapes
             ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor)); // Array of colors
 
             Console.WriteLine(" Mason's Shape Calculator");
@@ -50,7 +51,7 @@ namespace EX_01
                 do
                 {
                     int num = 0;
-                    Console.WriteLine("\n Which shape do you to calculate?");
+                    Console.WriteLine("\n Which shape do you wanna look at?");
                     Console.WriteLine(" Note: Input number corresponding to shape.\n");
 
                     // prints outs the number and shape array
@@ -71,26 +72,40 @@ namespace EX_01
                     case 0:
                         Shape sq = new Square();
                         sq.GetPerimeter();
+                        sq.GetArea();
+                        if (v.CheckShapeStatus(sq) == false)
+                        {
+                            Console.WriteLine("Square hasn't been modified yet");
+                            Console.WriteLine("Enter Square Side Length: ");
+                            double sqLength = Convert.ToDouble(Console.ReadLine());
+                            //sq.GetArea();
+                            //sq.GetPerimeter();
+                        }
                         break;
                     case 1:
                         Shape tri = new Triangle();
                         tri.GetPerimeter();
+                        tri.GetArea();
                         break;
                     case 2:
                         Shape ci = new Circle();
                         ci.GetPerimeter();
+                        ci.GetArea();
                         break;
                     case 3:
                         Shape oct = new Octagon();
                         oct.GetPerimeter();
+                        oct.GetArea();
                         break;
                     case 4:
                         Shape eq = new EqPolygon();
                         eq.GetPerimeter();
+                        eq.GetArea();
                         break;
                     case 5:
                         Shape sh = new Shape();
                         sh.GetPerimeter();
+                        sh.GetArea();
                         break;
                 }
 
@@ -105,6 +120,30 @@ namespace EX_01
                 }
 
             } while (!Quit);
+        }
+    }
+
+    class questions
+    {
+        public void shapeQuestions(Shape s)
+        {
+            
+        }
+    }
+
+    // Checks if the shape has been seen before
+    class Validation
+    {
+        public bool CheckShapeStatus(Shape s)
+        {
+            if (s.GetArea() == 0 || s.GetPerimeter() == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

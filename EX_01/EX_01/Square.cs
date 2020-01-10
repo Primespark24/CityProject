@@ -38,6 +38,7 @@ namespace EX_01
             this.SqSideLen = SqSideLen;
         }
 
+
         // Get Perimeter for Square
         public override double GetPerimeter()
         {
