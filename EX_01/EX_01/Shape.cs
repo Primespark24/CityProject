@@ -3,7 +3,7 @@
 
 namespace EX_01
 {
-    public class Shape
+    public abstract class Shape
     {
         
         // Method Set and Get
@@ -20,23 +20,21 @@ namespace EX_01
         }
 
         // Constructor
-        public Shape(string Color)
+        public Shape(string color)
         {
-            this.Color = Color;
+            Color = color;
         }
 
         // GetPerimeter for Shape... Shape is generic so nothing should show but a error.
-        public virtual double GetPerimeter()
-        {
-            Console.WriteLine("\n Error: Generic shapes don't contain valid area.");
-            return 0.0;
-        }
+        public abstract double GetPerimeter();
 
         // Get Area
-        public virtual double GetArea()
+        public abstract double GetArea();
+
+        public virtual void PrintShape()
         {
-            Console.WriteLine("\n Error: Generic shapes don't contain valid area.");
-            return 0.0;
+            Console.WriteLine("Shape Perimeter: " + GetPerimeter());
+            Console.WriteLine("Shape Area: " + GetArea());
         }
     }
 }

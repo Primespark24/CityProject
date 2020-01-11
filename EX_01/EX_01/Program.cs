@@ -12,41 +12,48 @@ namespace EX_01
             string response; // Holds response from user
             int select; // Keeps number selected for shape
             Shape s = new Shape();
-            Validation v = new Validation();
+
+            // Shape objects
+            Square sq = new Square();
+            Triangle tri = new Triangle();
+            Circle ci = new Circle();
+            Octagon oct = new Octagon();
+            EqPolygon eq = new EqPolygon();
 
             // Arrays
-            string[] shapeNames = new string[7] { "Square", "Triangle", "Circle", "Octagon", "EqPolygon", "Shape", "Compare"}; // Array of shapes
+            string[] shapeNames = new string[8] { "Square", "Triangle", "Circle", "Octagon", "EqPolygon", "Shape", "Compare", "Quit"}; // Array of shapes
             ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor)); // Array of colors
 
             Console.WriteLine(" Mason's Shape Calculator");
 
-            // keep program running unless user says no to continue
+            // if color is not found keep asking user.
             do
             {
-                // if color is not found keep asking user.
-                do
+                Console.WriteLine(" What color do you want the background?");
+                s.Color = Console.ReadLine();
+                ColorFound = false;
+
+                // Checks if user color is valid in the array of Colors
+                foreach (var color in colors)
                 {
-                    Console.WriteLine(" What color you want shape Calculator?");
-                    s.Color = Console.ReadLine();
-                    ColorFound = false;
-                    
-                    // Checks if user color is valid in the array of Colors
-                    foreach (var color in colors)
+                    if (s.Color == Convert.ToString(color))
                     {
-                        if (s.Color == Convert.ToString(color))
-                        {
-                            ColorFound = true;
-                        }
+                        ColorFound = true;
                     }
+                }
 
-                } while (!ColorFound);
+            } while (!ColorFound);
 
-                // Enum Parse to make s.color 
-                // Credit https://www.csharp-examples.net/string-to-enum/
-                ConsoleColor backg = (System.ConsoleColor)Enum.Parse(typeof(System.ConsoleColor), s.Color);
-                
-                Console.BackgroundColor = backg;
-                Console.Clear();
+            // Enum Parse to make s.color 
+            // Credit https://www.csharp-examples.net/string-to-enum/
+            ConsoleColor backg = (System.ConsoleColor)Enum.Parse(typeof(System.ConsoleColor), s.Color);
+
+            Console.BackgroundColor = backg;
+            Console.Clear();
+
+            // keep program running unless user says yes to quit
+            do
+            {
 
                 do
                 {
@@ -64,86 +71,54 @@ namespace EX_01
                     // read input from user to select shape
                     select = Convert.ToInt32(Console.ReadLine());
 
-                } while (select < 0 || select > 5);
+                } while (select < 0 || select > 7);
 
                 // Switch statement to make new shape object and read perimeter
                 switch (select)
                 {
                     case 0:
-                        Shape sq = new Square();
-                        sq.GetPerimeter();
-                        sq.GetArea();
-                        if (v.CheckShapeStatus(sq) == false)
-                        {
-                            Console.WriteLine("Square hasn't been modified yet");
-                            Console.WriteLine("Enter Square Side Length: ");
-                            double sqLength = Convert.ToDouble(Console.ReadLine());
-                            //sq.GetArea();
-                            //sq.GetPerimeter();
-                        }
+
+                        sq.PrintShape();
+                        Console.ReadLine();
                         break;
                     case 1:
-                        Shape tri = new Triangle();
-                        tri.GetPerimeter();
-                        tri.GetArea();
+                        tri.PrintShape();
+                        Console.ReadLine();
                         break;
                     case 2:
-                        Shape ci = new Circle();
-                        ci.GetPerimeter();
-                        ci.GetArea();
+                        ci.PrintShape();
+                        Console.ReadLine();
                         break;
                     case 3:
-                        Shape oct = new Octagon();
-                        oct.GetPerimeter();
-                        oct.GetArea();
+                        oct.PrintShape();
+                        Console.ReadLine();
                         break;
                     case 4:
-                        Shape eq = new EqPolygon();
-                        eq.GetPerimeter();
-                        eq.GetArea();
+                        eq.PrintShape();
+                        Console.ReadLine();
                         break;
                     case 5:
-                        Shape sh = new Shape();
-                        sh.GetPerimeter();
-                        sh.GetArea();
+                        s.PrintShape();
+                        Console.ReadLine();
                         break;
-                }
 
-                // Prompts user to continue
-                Console.WriteLine(" Do you want to continue? Yes No");
-                response = Console.ReadLine();
+                    case 6:
+                    // Compare
 
-                // if no, quit is true and terminates program
-                if (response.Contains("no"))
-                {
-                    Quit = true;
+                    case 7:
+                        // Prompts user to quit
+                        Console.WriteLine(" Do you want to quit? Yes No");
+                        response = Console.ReadLine();
+                        // if no, quit is true and terminates program
+                        if (response.Contains("yes"))
+                        {
+                            Quit = true;
+                        }
+
+                        break;
                 }
 
             } while (!Quit);
-        }
-    }
-
-    class questions
-    {
-        public void shapeQuestions(Shape s)
-        {
-            
-        }
-    }
-
-    // Checks if the shape has been seen before
-    class Validation
-    {
-        public bool CheckShapeStatus(Shape s)
-        {
-            if (s.GetArea() == 0 || s.GetPerimeter() == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
         }
     }
 }

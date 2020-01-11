@@ -52,5 +52,29 @@ namespace EX_01
            Carea = (3.141595267898 * Radius * Radius);
            return Carea;
         }
+
+        // Print properties for Circle
+        public override void PrintShape()
+        {
+            Console.WriteLine("Circle Perimeter: " + GetPerimeter());
+            Console.WriteLine("Circle Area: " + GetArea());
+            if ((GetArea() == 0 && GetPerimeter() == 0))
+            {
+                Console.WriteLine("This shape hasn't been modified yet");
+                Console.WriteLine("Enter Circle Radius Length: ");
+                while (true)
+                {
+                    if (double.TryParse(Console.ReadLine(), out double radius))
+                    {
+                        Radius = radius;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Try to input a int or a decimal");
+                    }
+                }
+            }
+        }
     }
 }

@@ -60,5 +60,28 @@ namespace EX_01
                 return 0.0;
             }
         }
+
+        public override void PrintShape()
+        {
+            Console.WriteLine("Octagon Perimeter: " + GetPerimeter());
+            Console.WriteLine("Octagon Area: " + GetArea());
+            if ((GetArea() == 0 && GetPerimeter() == 0))
+            {
+                Console.WriteLine("This shape hasn't been modified yet");
+                Console.WriteLine("Enter Octagon side Length: ");
+                while (true)
+                {
+                    if (double.TryParse(Console.ReadLine(), out double sideLen))
+                    {
+                        OctSideLen = sideLen;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Try to input a int or a decimal");
+                    }
+                }
+            }
+        }
     }
 }

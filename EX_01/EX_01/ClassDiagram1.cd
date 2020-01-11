@@ -3,42 +3,42 @@
   <Class Name="EX_01.Shape">
     <Position X="8.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAgAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAkAAAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EX_01.Circle">
     <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAIAAAAAAAAACAQAAAAAAAAAAAAAAEAAAAAEAAAAAA=</HashCode>
       <FileName>Circle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EX_01.EqPolygon">
     <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAACAAAAIAAEACAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAAAABEAAAAEAAAAAEIAAAAA=</HashCode>
       <FileName>EqPolygon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EX_01.Triangle">
-    <Position X="10" Y="6.25" Width="1.5" />
+    <Position X="10" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEACAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAgAAAAEAAEAAAAAEAAEAAA=</HashCode>
       <FileName>Triangle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EX_01.Square">
-    <Position X="11.75" Y="6.25" Width="1.5" />
+    <Position X="11.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAEACAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAgAAAAAAAAEAAAAAABAAAAAAAAEAAAAAEAAAAAA=</HashCode>
       <FileName>Square.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EX_01.Octagon">
-    <Position X="13.5" Y="6.25" Width="1.5" />
+    <Position X="13.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACgAAAAAAAAA=</HashCode>
+      <HashCode>AQAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAEAQAAAA=</HashCode>
       <FileName>Octagon.cs</FileName>
     </TypeIdentifier>
   </Class>
