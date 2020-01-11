@@ -26,6 +26,7 @@ namespace EX_03
             cont = Console.ReadLine().ToLower();
             while (cont == "y")
             {
+                // determines if they want to play again or not
                 if (cont.Contains("y"))
                 {
                     Gotham.TourResident();
