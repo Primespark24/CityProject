@@ -16,3 +16,27 @@ C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EX_01.pdb
 C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.csprojAssemblyReference.cache
 C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.exe
 C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.pdb
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Base.dll
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Pdf.dll
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebBrowser.dll
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebEngine.dll
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Base.xml
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Pdf.xml
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebBrowser.xml
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebEngine.xml
+C:\Users\mcaird22\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.csproj.CopyComplete
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EX_01.exe.config
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EX_01.exe
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EX_01.pdb
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Base.dll
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Pdf.dll
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebBrowser.dll
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebEngine.dll
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Base.xml
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.Pdf.xml
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebBrowser.xml
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\bin\Debug\EO.WebEngine.xml
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.csprojAssemblyReference.cache
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.csproj.CopyComplete
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.exe
+C:\Users\Mason Caird\Desktop\hm3\homework3\EX_01\EX_01\obj\Debug\EX_01.pdb
